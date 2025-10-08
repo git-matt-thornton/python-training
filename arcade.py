@@ -15,7 +15,7 @@ def play_game(name="Player One"):
             print(f"\nHi {name}, welcome to the Arcade menu.")
 
         playerchoice = input(
-            "\nPlease choose a game:\n\t1 = 'Rock, Paper, Scissors'\n\t2 = 'Guess My Number'\nPress 'X' to exit the arcade.\n")
+            "\nPlease choose a game!!!\n\t1 = 'Rock, Paper, Scissors'\n\t2 = 'Guess My Number'\nPress 'X' to exit the arcade.\n")
 
         if playerchoice.lower() not in ["1", "2", "x"]:
             print(f"\n{name}, please enter1, 2 or X.")
