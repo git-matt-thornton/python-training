@@ -1,1 +1,1 @@
-Python traiining materials from Dave Gray
+Python training materials from Dave Gray
