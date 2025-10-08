@@ -9,9 +9,12 @@
 </head>
 
 <body>
-    <h1>{{ title }} Weather</h1>
+    <h1>{{ title }} Weather {{ today }}</h1>
     <p>{{ status }} and {{ temp }} °C</p>
     <p>Feels like {{ feels_like }} °C</p>
+    <p>Wind speed {{ wind_speed }} m/s</p>
+    <p>Sunrise {{ sunrise }}</p>
+    <p>Sunset {{ sunset }}</p>
 
     <form action="/weather">
         <input type="text" name="city" id="city" placholder="Enter a city">

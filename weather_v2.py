@@ -1,3 +1,4 @@
+from datetime import datetime
 from dotenv import load_dotenv
 from pprint import pprint
 import requests
@@ -26,5 +27,15 @@ if __name__ == "__main__":
 
     weather_data = get_current_weather(city)
 
-    print("\n")
     pprint(weather_data)
+
+    # City is not found by API
+    if not weather_data['cod'] == 200:
+        print("\nCity not found!!!")
+    else:
+        todays_date = datetime.fromtimestamp(weather_data['dt'])
+        sunrise = datetime.fromtimestamp(weather_data['sys']['sunrise'])
+        sunset = datetime.fromtimestamp(weather_data['sys']['sunset'])
+        print(f"\n Today's Date: {todays_date.date().strftime("%d-%b-%Y")}")
+        print(f"\n Sunrise: {sunrise.time()}")
+        print(f"\n Sunrise: {sunset.time()}")
