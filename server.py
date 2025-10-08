@@ -33,7 +33,8 @@ def get_weather():
         temp=f"{weather_data['main']['temp']:.1f}",
         feels_like=f"{weather_data['main']['feels_like']:.1f}",
         wind_speed=f"{weather_data['wind']['speed']:.1f}",
-        today=datetime.fromtimestamp(weather_data['dt']).strftime("%d-%b-%Y"),
+        today=datetime.fromtimestamp(
+            weather_data['dt']).strftime("%A, %d %b %Y %H:%M"),
         sunrise=datetime.fromtimestamp(weather_data['sys']['sunrise']).time(),
         sunset=datetime.fromtimestamp(weather_data['sys']['sunset']).time()
     )
